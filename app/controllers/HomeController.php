@@ -5,6 +5,9 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $this->view('home/index');
+        $nome = 'João';
+        $idade = 15;
+
+        $this->view('home/index', ['nome' => $nome, 'idade' => $idade]);
     }
 }
