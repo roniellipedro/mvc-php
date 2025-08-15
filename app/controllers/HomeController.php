@@ -1,13 +1,14 @@
 <?php
 require_once __DIR__ . '/../core/Controller.php';
+require_once __DIR__ . '/../models/Usuario.php';
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $nome = 'João';
-        $idade = 15;
+        $usuario = new Usuario();
+        $data = $usuario->getUserData();
 
-        $this->view('home/index', ['nome' => $nome, 'idade' => $idade]);
+        $this->view('home/index', $data);
     }
 }

@@ -12,6 +12,7 @@
     <p>Página HOME</p>
     <p>Meu nome é <?= $nome; ?></p>
     <p>Minha idade é <?= $idade; ?></p>
+    <p>Meu email é <?= $email; ?></p>
 </body>
 
 </html>
