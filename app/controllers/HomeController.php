@@ -11,4 +11,9 @@ class HomeController extends Controller
 
         $this->view('home/index', $data);
     }
+
+    public function contact()
+    {
+        $this->view('home/contact');
+    }
 }

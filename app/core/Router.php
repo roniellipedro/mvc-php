@@ -14,11 +14,20 @@ class Router
         $controllerName = $parts[0] ?? 'Home';
         $controllerName = ucfirst($controllerName) . 'Controller';
 
-        if(!class_exists($controllerName)){
+        if (!class_exists($controllerName)) {
             $controllerName = 'NotFoundController';
         }
 
         $controller = new $controllerName();
-        $controller->index();
+
+        $actionName = $parts[1] ?? 'index';
+
+        if (!method_exists($controller, $actionName)) {
+            $controller = new NotFoundController();
+            $controller->index();
+            exit();
+        }
+
+        $controller->$actionName();
     }
 }
