@@ -24,10 +24,13 @@ class Router
 
         if (!method_exists($controller, $actionName)) {
             $controller = new NotFoundController();
-            $controller->index();
-            exit();
+            $actionName = 'index';
         }
 
-        $controller->$actionName();
+        $params = array_slice($parts, 2);
+
+        // $controller->$actionName();
+
+        call_user_func_array([$controller, $actionName], $params);
     }
 }
