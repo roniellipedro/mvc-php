@@ -1,5 +1,4 @@
 <?php
-require_once __DIR__ . '/../controllers/HttpErrorController.php';
 
 class HttpErrorController extends Controller
 {
