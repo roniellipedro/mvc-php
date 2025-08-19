@@ -7,5 +7,10 @@
             "email": "ronielli.acicredi@sicoob.com.br"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
     "require": {}
 }
