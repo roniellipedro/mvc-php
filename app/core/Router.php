@@ -2,7 +2,6 @@
 
 namespace App\Core;
 
-use App\Controllers\HomeController;
 use App\Controllers\Errors\HttpErrorController;
 
 
