@@ -5,6 +5,7 @@ namespace App\Core;
 use App\Controllers\HomeController;
 use App\Controllers\Errors\HttpErrorController;
 
+
 class Router
 {
     public function dispatch($url)
@@ -14,7 +15,6 @@ class Router
 
         $controllerName = $parts[0] ?? 'Home';
         $controllerName = 'App\Controllers\\' . ucfirst($controllerName) . 'Controller';
-
         $actionName = $parts[1] ?? 'index';
 
         if (!class_exists($controllerName)) {
