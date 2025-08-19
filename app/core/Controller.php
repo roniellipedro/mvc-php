@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Core;
+
+use Exception;
+
 class Controller
 {
     public function view($view, $viewData = [])

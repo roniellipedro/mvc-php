@@ -1,6 +1,9 @@
 <?php
-require_once __DIR__ . '/../controllers/HomeController.php';
-require_once __DIR__ . '/../controllers/errors/HttpErrorController.php';
+
+namespace App\Core;
+
+use App\Controllers\HomeController;
+use App\Controllers\Errors\HttpErrorController;
 
 class Router
 {
@@ -10,7 +13,7 @@ class Router
         $parts = $url ? explode('/', $url) : [];
 
         $controllerName = $parts[0] ?? 'Home';
-        $controllerName = ucfirst($controllerName) . 'Controller';
+        $controllerName = 'App\Controllers\\' . ucfirst($controllerName) . 'Controller';
 
         $actionName = $parts[1] ?? 'index';
 

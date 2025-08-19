@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Controllers\Errors;
+
+use App\Core\Controller;
+
 class HttpErrorController extends Controller
 {
     public function Aunauthorized()
