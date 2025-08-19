@@ -1,0 +1,11 @@
+{
+    "name": "roni/mvc-php",
+    "description": "MVC Structure",
+    "authors": [
+        {
+            "name": "Roni",
+            "email": "ronielli.acicredi@sicoob.com.br"
+        }
+    ],
+    "require": {}
+}
